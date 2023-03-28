@@ -26,19 +26,25 @@ const Home = () => {
                             <Plot
                                 data={[
                                 {
-                                    x: data.map((item) => item.longitude),
-                                    y: data.map((item) => item.latitude),
+                                    type: "scattermapbox",
+                                    lon: data.map((item) => item.Lng),
+                                    lat: data.map((item) => item.Lat),
                                     mode: "markers",
-                                    type: "scatter",
-                                    marker: { color: "red" },
+                                    marker: { color: "fuchsia", size: 10 },
                                 },
                                 ]}
                                 useResizeHandler
                                 layout={{
-                                    title: "Bangkok, Thailand",
-                                    xaxis: { title: "Longitude" },
-                                    yaxis: { title: "Latitude" },
-                                    autosize: true
+                                    autosize: true,
+                                    margin: {
+                                        l: 0,
+                                        r: 0,
+                                        b: 0,
+                                        t: 0,
+                                        pad: 4
+                                      },
+                                      dragmode: 'zoom',
+                                      mapbox: { style: "open-street-map", center: { lat: 13.82, lon: 100.488 }, zoom: 12 }
                                 }}
                                 style={{width: "100%"}}
                             />
