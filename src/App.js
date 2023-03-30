@@ -9,7 +9,11 @@ function App() {
   return (
     <div>
       <Home />
-      <Snowfall snowflakeCount={10} />
+      <Snowfall 
+        snowflakeCount={500}
+        speed={[0,0]}
+        style={{ opacity: 0.1 }}
+      />
     </div>
   );
 }
