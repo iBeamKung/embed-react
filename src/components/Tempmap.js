@@ -9,7 +9,7 @@ const Tempmap = () => {
     async function getData() {
         try {
             setLoading(true);
-            const response = await axios.get('/test-data.json');
+            const response = await axios.get('https://embed-lab-api.up.railway.app/data');
             setData(response.data);
             console.log(response.data);
             setLoading(false);

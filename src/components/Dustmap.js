@@ -14,7 +14,7 @@ const Dustmap = () => {
     let DustOrange = 0;
     let DustRed = 0;
     */
-    
+    /*
     function getColor(dust_value)
     {
         if(dust_value < 26) { return "#3BCCFF"; }
@@ -23,7 +23,7 @@ const Dustmap = () => {
         else if(dust_value < 201) { return "#FFA200"; }
         else { return "#FF3B3B"; }
     }
-
+    */
     async function getData() {
         try {
             setLoading(true);
@@ -94,6 +94,11 @@ const Dustmap = () => {
             }
             <div class="block"></div>
             <div class="level">
+                <div class="level-item has-text-centered">
+                    <div>
+                    <p class="title">Value</p>
+                    </div>
+                </div>
                 <div class="level-item has-text-centered">
                     <div>
                     <p class="heading">0 - 25 ppm</p>
